@@ -1,0 +1,11 @@
+---
+applications:
+- name: instagrid
+  memory: 64M
+  disk: 128M
+  buildpack: ruby_buildpack
+  domains:
+    - dwayne.io
+    - dwayneforde.com
+    - dwayneforde.ca
+    - cfapps.io
