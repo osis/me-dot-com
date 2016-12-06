@@ -1,36 +1,244 @@
-<!DOCTYPE html>
 <html>
-  <head>
-    <title>InstaGrid</title>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" />
 
-    <!-- React -->
-    <script src="https://npmcdn.com/react@15.3.1/dist/react.js"></script>
-    <script src="https://npmcdn.com/react-dom@15.3.1/dist/react-dom.js"></script>
-    <script src="https://npmcdn.com/babel-core@5.8.38/browser.min.js"></script>
+<!-- The Looks -->
+<head>
+  <title>Dwayne Forde</title>
+  <link rel="shortcut icon" href="data:image/x-icon;base64,R0lGODlhEAAQAPEAAAAAAADmNgAAAAAAACH5BAlGAAIAIf8LTkVUU0NBUEUyLjADAQAAACwAAAAAEAAQAAAC5wQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAQAAAAgUAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKAAAh+QQJRgACACwAAAAAEAAQAAAC5wQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKAAA7" rel="icon" type="image/x-icon" /> 
+  <meta name="description" content="Full stack software developer, product shipper, and lifelong leaner." />
+  <meta name="keywords" content="programming, coding, engineering, development, fullstack, management" />
+  <meta name="author" content="Dwayne Forde" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<script type="application/ld+json">
+		{
+		  "@context": "http://schema.org",
+		  "@type": "Person",
+			"name" : "Dwayne Forde",
+			"givenName" : "Dwayne",
+		  "familyName" : "Forde",
+		  "url": "http://www.dwayne.io",
+		  "sameAs": [
+		  	"https://twitter.com/dwayneforde",
+		    "https://www.instagram.com/dwayneforde",
+		    "https://www.linkedin.com/in/dwayne-forde-54367014",
+		    "https://www.facebook.com/dwayne.forde",
+		    "https://plus.google.com/+DwayneForde"
+		  ]
+		}
+	</script>
 
-    <!-- Instagrid -->
-    <link rel="stylesheet" href="/lib/instagrid.css" type="text/css" media="screen" />
-    <script type="text/babel" src="/lib/instagrid.js"></script>
+  <link rel="stylesheet" href="https://opensource.keycdn.com/fontawesome/4.6.3/font-awesome.min.css">
+  <style>
+    html, body {
+      font-family: "Courier New", Courier, monospace;
+      color: white;
+      background-color: black;
+    }
 
-    <!-- Add jQuery library -->
-    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+    body {
+      margin: 0;
+      padding: 0;
+    }
 
-    <!-- fancyBox -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.css" type="text/css" media="screen" />
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.pack.js"></script>
+    a, a:-webkit-any-link {
+      color: white;
+      text-decoration: none;
+      margin: 0px 3px;
+    }
 
-  </head>
-  <body>
-    <div id="instagrid"></div>
-  </body>
-  <script type="text/babel">
-    $(".fancybox").fancybox();
+    .bgBlack {
+      background-color: black !important;
+    }
 
-    ReactDOM.render(
-      <InstaGrid userID="instagram" />,
-      document.getElementById('instagrid')
-    );
-  </script>
+    .borderBlack {
+      border-color: black !important;
+    }
+
+    .black, .black a, .black a:-webkit-any-link {
+      color: black;
+    }
+
+
+    #name, #social {
+      position: absolute;
+      bottom: 8px;
+    }
+
+    #name {
+      left: 8px;
+    }
+
+    #social {
+      font-family: "FontAwesome";
+      font-size: 1.1em;
+      right: 8px;
+    }
+
+    .bar {
+      position: absolute;
+      bottom: 0;
+
+      width: 136px;
+      left: 50%;
+      margin-left: -68px;
+      text-align: center;
+    }
+
+    .bar .btn {
+      float: left;
+      width: 20px;
+      height: 20px;
+      margin: 5px;
+
+      border: 2px solid white;
+      border-radius: 20px;
+      background-color: white;
+      -webkit-transition: all 1s linear;
+    }
+
+    .content {
+      text-align: center;
+      position: absolute;
+      overflow: hidden;
+      background-color:rgba(0, 0, 0, 0.8);
+      left: 50%;
+      width: 34%;
+      height: 0px;
+      margin-left: -17%;
+      -webkit-transition: height 4s ease-out;
+    }
+
+    .content img {
+      width: 90%;
+    }
+  </style>
+</head>
+
+<!-- The Body -->
+<body>
+  <div id="CFApps" class="content moo">
+    <img src="http://cf-apps.cfapps.io/img/screenshots/app-2.png"/>
+  </div>
+  <canvas id="canvasOfDoom">
+    Well this sucks. You're browser is too old. :(
+  </canvas>
+  <div class="bar">
+    <div class= "btn" onClick="setTextColour(this.style.backgroundColor)" style="background-color:#ff5050;"></div>
+    <div class= "btn" onClick="setTextColour(this.style.backgroundColor)" style="background-color:#3ba948;"></div>
+    <div class= "btn" onClick="setTextColour(this.style.backgroundColor)" style="background-color:#33ccff;"></div>
+    <div class= "btn" onClick="toggleBgColour()"></div>
+  </div>
+  <div id="name"></div>
+  <div id="social"></div>
+</body>
+
+<!-- The Brains -->
+<script type="text/javascript">
+  var c = document.getElementById("canvasOfDoom");
+  var textColor = "#3ba948";
+  var bgColor = "rgba(0,0,0,.08)";
+
+  // Fullscreen Canvas
+  function fillScreen() {
+    c.width = window.innerWidth;
+    c.height = window.innerHeight;
+  }
+  window.addEventListener('resize', fillScreen, false);
+  fillScreen();
+
+  // Draw
+  var yPositions;
+
+  function doomInit() {
+    yPositions = Array(300).join(0).split('');
+
+    var ctx=c.getContext('2d');
+    ctx.font = '10pt Courier New';
+  }
+  doomInit()
+
+  function draw() {
+    // Fade
+    var ctx=c.getContext('2d');
+    ctx.fillStyle=bgColor;
+    ctx.fillRect(0,0,c.width,c.height);
+
+    // Text
+    ctx.fillStyle=textColor;
+    yPositions.map(function(y, index) {
+      text = String.fromCharCode(65393+Math.random()*32);
+      x = (index * 10)+10;
+      ctx.fillText(text, x, y);
+      if(y > 100 + Math.random()*1e4) {
+        yPositions[index]=0;
+      } else {
+        yPositions[index] = y + 15
+      }
+    });
+  }
+
+  function setTextColour(c) {
+    window.textColor = c;
+  }
+
+  function toggleBgColour(c) {
+    var e = this.event.srcElement;
+    var btns = this.event.srcElement.parentElement.children;
+    var btnClass;
+    var bgBtnClass;
+    var windowBgColor;
+
+    if (e.classList.length < 2) {
+      bgBtnClass = "btn bgBlack borderBlack";
+      btnClass = "btn borderBlack";
+      windowBgColor = "rgba(255,255,255,.08)";
+      bodyClass = "black";
+    } else {
+      bgBtnClass = btnClass = "btn";
+      windowBgColor = "rgba(0,0,0,.08)";
+      bodyClass = "";
+    }
+
+    for (i in btns) {
+      btns[i].className = btnClass;
+    }
+
+    e.className = bgBtnClass;
+    window.bgColor = windowBgColor;
+    document.body.className = bodyClass;
+  }
+
+  setInterval(draw, 50);
+</script>
+<script type="text/javascript">
+  var cfapps = document.getElementById("CFApps");
+
+  var something = function(event) {
+    console.log("dsfsdf");
+  }
+
+  cfapps.addEventListener("webkitAnimationEnd", something,false);
+  cfapps.addEventListener("animationend", something,false);
+  cfapps.addEventListener("oanimationend", something,false);
+</script>
+<script src="https://cdn.jsdelivr.net/theaterjs/latest/theater.min.js"></script>
+<script>
+  var nameTheater = theaterJS()
+  nameTheater.addActor('name')
+  nameTheater.addScene('name:Dwayne Forde')
+
+  var socialTheater = theaterJS()
+  var options = { accuracy: 1, speed: 1 };
+  socialTheater.addActor('social', options)
+  socialTheater.addScene('social:<a href="https://twitter.com/dwayneforde" target="_blank">&#xf099;</a> <a href="https://www.linkedin.com/in/dwayne-forde-54367014" target="_blank">&#xf0e1;</a> <a href="https://www.instagram.com/dwayneforde/" target="_blank">&#xf16d;</a> <a href="https://github.com/Osis" target="_blank">&#xf09b;</a>')
+</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-83251672-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
 </html>
