@@ -39,7 +39,7 @@
       padding: 0;
     }
 
-    a, a:-webkit-any-link {
+    a, any-link {
       color: white;
       text-decoration: none;
       margin: 0px 3px;
@@ -212,10 +212,6 @@
 <script type="text/javascript">
   var cfapps = document.getElementById("CFApps");
 
-  var something = function(event) {
-    console.log("dsfsdf");
-  }
-
   cfapps.addEventListener("webkitAnimationEnd", something,false);
   cfapps.addEventListener("animationend", something,false);
   cfapps.addEventListener("oanimationend", something,false);
@@ -239,6 +235,5 @@
 
   ga('create', 'UA-83251672-1', 'auto');
   ga('send', 'pageview');
-
 </script>
 </html>
