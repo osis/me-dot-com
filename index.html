@@ -1,13 +1,17 @@
-<html>
+<html lang="en">
 
 <!-- The Looks -->
 <head>
   <title>Dwayne Forde</title>
   <link rel="shortcut icon" href="data:image/x-icon;base64,R0lGODlhEAAQAPEAAAAAAADmNgAAAAAAACH5BAlGAAIAIf8LTkVUU0NBUEUyLjADAQAAACwAAAAAEAAQAAAC5wQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAQAAAAgUAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKAAAh+QQJRgACACwAAAAAEAAQAAAC5wQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKAAA7" rel="icon" type="image/x-icon" /> 
-  <meta name="description" content="Full stack software developer, product shipper, and lifelong leaner." />
-  <meta name="keywords" content="programming, coding, engineering, development, fullstack, management" />
+  <meta name="description" content="Full stack software developer, product shipper, and lifelong learner." />
   <meta name="author" content="Dwayne Forde" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <!-- Google -->
+  <meta name="google-site-verification" content="YNe6E5LWyOJD8s82D-Jx_-1mvQerzm6Qwl6CVBaFIFg" />
+  <meta name="google-site-verification" content="zOLzaMltvpD2NhwSf7obo2xiUJVnVWTbxj23Q9TziVM" />
+  <meta name="google-site-verification" content="myoyjK-3Q27eqqcIeATsQR295Eq_llKL5-8WrSurcBE" />
+  <meta name="google-site-verification" content="RtRRvRUqBVWMk8bctarKJwE2d5lnTlC7GvbqShTXHrE" />
 	<script type="application/ld+json">
 		{
 		  "@context": "http://schema.org",
@@ -16,17 +20,18 @@
 			"givenName" : "Dwayne",
 		  "familyName" : "Forde",
 		  "url": "http://www.dwayne.io",
+      "homeLocation": "Toronto",
 		  "sameAs": [
+        "https://github.com/osis",
 		  	"https://twitter.com/dwayneforde",
-		    "https://www.instagram.com/dwayneforde",
 		    "https://www.linkedin.com/in/dwayne-forde-54367014",
-		    "https://www.facebook.com/dwayne.forde",
+        "https://medium.com/@dwayneforde",
 		    "https://plus.google.com/+DwayneForde"
 		  ]
 		}
 	</script>
-
-  <link rel="stylesheet" href="https://opensource.keycdn.com/fontawesome/4.6.3/font-awesome.min.css">
+  <!-- /Google --> 
+  <link href="https://use.fontawesome.com/releases/v5.0.2/css/all.css" rel="stylesheet">
   <style>
     html, body {
       font-family: "Courier New", Courier, monospace;
@@ -43,6 +48,12 @@
       color: white;
       text-decoration: none;
       margin: 0px 3px;
+    }
+
+    p a, p a:-webkit-any-link {
+      color: lime;
+      text-decoration: underline;
+      margin: auto;
     }
 
     .bgBlack {
@@ -68,7 +79,7 @@
     }
 
     #social {
-      font-family: "FontAwesome";
+      font-family: "Font Awesome 5 Brands";
       font-size: 1.1em;
       right: 8px;
     }
@@ -115,11 +126,12 @@
 
 <!-- The Body -->
 <body>
-  <div id="CFApps" class="content moo">
-    <img src="http://cf-apps.cfapps.io/img/screenshots/app-2.png"/>
-  </div>
   <canvas id="canvasOfDoom">
-    Well this sucks. You're browser is too old. :(
+    <h1>Well this sucks; your browser is outdated. :(</h1>
+
+    <p>Please consider <a href="https://browser-update.org/update.html" target="_blank">upgrading</a> and visiting again.</p>
+    <p>TLDR - Full stack software developer, product shipper, and lifelong learner. Have had the pleasure of working with the automotive, entertainment, telecom, sports, and other industries to deploy solutions in a highly interactive and compelling manner. Have also presented work at events like TEDx Silicon North and  has also been featured in major publications, including The Globe and Mail and The Toronto Star.</p>
+    <p><a href="https://twitter.com/dwayneforde" target="_blank">Twitter</a> <a href="https://www.linkedin.com/in/dwayne-forde-54367014" target="_blank">LinkedIn</a> <a href="https://www.instagram.com/dwayneforde/" target="_blank">Instagram</a> <a href="https://github.com/Osis" target="_blank">Github</a></p>
   </canvas>
   <div class="bar">
     <div class= "btn" onClick="setTextColour(this.style.backgroundColor)" style="background-color:#ff5050;"></div>
@@ -229,7 +241,7 @@
   var socialTheater = theaterJS()
   var options = { accuracy: 1, speed: 1 };
   socialTheater.addActor('social', options)
-  socialTheater.addScene('social:<a href="https://twitter.com/dwayneforde" target="_blank">&#xf099;</a> <a href="https://www.linkedin.com/in/dwayne-forde-54367014" target="_blank">&#xf0e1;</a> <a href="https://www.instagram.com/dwayneforde/" target="_blank">&#xf16d;</a> <a href="https://github.com/Osis" target="_blank">&#xf09b;</a>')
+  socialTheater.addScene('social:<a href="https://github.com/osis" target="_blank"><i class="fab fa-github"></i></a> <a href="https://www.linkedin.com/in/dwayne-forde-54367014" target="_blank">&#xf0e1;</a> <a href="https://medium.com/@dwayneforde"><i class="fab fa-medium"></i></a> <a href="https://twitter.com/dwayneforde" target="_blank">&#xf099;</a>')
 </script>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -237,8 +249,9 @@
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-83251672-1', 'auto');
+  ga('create', 'UA-83251672-1', 'auto', {'allowLinker': true});
+  ga('require', 'linker');
+  ga('linker:autoLink', ['dwayne.io', 'dwayneforde.io', 'dwayneforde.com'] );
   ga('send', 'pageview');
-
 </script>
 </html>
