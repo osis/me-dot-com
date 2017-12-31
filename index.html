@@ -44,7 +44,7 @@
       padding: 0;
     }
 
-    a, a:-webkit-any-link {
+    a, any-link {
       color: white;
       text-decoration: none;
       margin: 0px 3px;
@@ -223,10 +223,6 @@
 </script>
 <script type="text/javascript">
   var cfapps = document.getElementById("CFApps");
-
-  var something = function(event) {
-    console.log("dsfsdf");
-  }
 
   cfapps.addEventListener("webkitAnimationEnd", something,false);
   cfapps.addEventListener("animationend", something,false);
