@@ -1,0 +1,12 @@
+---
+applications:
+- name: matrix
+  memory: 64M
+  disk: 64M
+  buildpack: staticfile_buildpack
+  no-hostname: true
+  domains:
+    - dwayne.io
+    - dwayneforde.com
+    - dwayneforde.ca
+    - dwayneforde.io
