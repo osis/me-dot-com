@@ -4,9 +4,8 @@ applications:
   memory: 16M
   disk_quota: 16M
   buildpack: staticfile_buildpack
-  no-hostname: true
-  domains:
-    - dwayne.io
-    - dwayneforde.com
-    - dwayneforde.ca
-    - dwayneforde.io
+  routes:
+    - route: dwayne.io
+    - route: dwayneforde.com
+    - route: dwayneforde.ca
+    - route: dwayneforde.io
