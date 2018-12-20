@@ -137,7 +137,7 @@
     <div class= "btn" onClick="setTextColour(this.style.backgroundColor)" style="background-color:#ff5050;"></div>
     <div class= "btn" onClick="setTextColour(this.style.backgroundColor)" style="background-color:#3ba948;"></div>
     <div class= "btn" onClick="setTextColour(this.style.backgroundColor)" style="background-color:#33ccff;"></div>
-    <div class= "btn" onClick="toggleBgColour()"></div>
+    <div class= "btn" onClick="toggleBgColour(event)"></div>
   </div>
   <div id="name"></div>
   <div id="social"></div>
@@ -192,9 +192,9 @@
     window.textColor = c;
   }
 
-  function toggleBgColour(c) {
-    var e = this.event.srcElement;
-    var btns = this.event.srcElement.parentElement.children;
+  function toggleBgColour(event) {
+    var e = event.srcElement;
+    var btns = event.srcElement.parentElement.children;
     var btnClass;
     var bgBtnClass;
     var windowBgColor;
@@ -220,13 +220,6 @@
   }
 
   setInterval(draw, 50);
-</script>
-<script type="text/javascript">
-  var cfapps = document.getElementById("CFApps");
-
-  cfapps.addEventListener("webkitAnimationEnd", something,false);
-  cfapps.addEventListener("animationend", something,false);
-  cfapps.addEventListener("oanimationend", something,false);
 </script>
 <script src="https://cdn.jsdelivr.net/theaterjs/latest/theater.min.js"></script>
 <script>
